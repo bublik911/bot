@@ -7,5 +7,8 @@ router = Router()
 
 
 @router.message(Command("start"))
-async def start(message: Message):
-    await message.answer(f"Здравствуйте, {message.from_user.first_name}! Я буду помогать Вам делать рассылку клиентам, работающих с Вами! Если вам нужна помощь, обратитесь к нашему администратору. Он сможет вам помочь!", reply_markup=url_admin_keyboard())
+async def start_handler(message: Message):
+    await message.answer(f"Здравствуйте, {message.from_user.first_name}! "
+                         f"Я буду помогать Вам делать рассылку клиентам, работающих с Вами!"
+                         f" Если вам нужна помощь, обратитесь к нашему администратору. Он сможет вам помочь!",
+                         reply_markup=url_admin_keyboard())

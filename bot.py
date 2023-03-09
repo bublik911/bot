@@ -1,11 +1,15 @@
 import asyncio
-import os
+from handlers import start, help
 from aiogram import Bot, Dispatcher
 
 
 async def main():
     bot = Bot(token='5775309553:AAHMhvke-BV7XNnIz6r-NEGphfx5XXUks0o')
     dp = Dispatcher()
+
+
+    dp.include_routers(start.router, help.router)
+
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)

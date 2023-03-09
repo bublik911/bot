@@ -6,6 +6,7 @@ from keyboards.url_admin_keyboard import url_admin_keyboard
 router = Router()
 
 
-@router.message(Command="help")
-async def help(message: Message):
-    await message.answer('Чтобы получить помощь по пользованию ботом, напишите администратору', reply_markup=url_admin_keyboard())
+@router.message(Command("help"))
+async def help_handler(message: Message):
+    await message.answer("Чтобы получить помощь по пользованию ботом, напишите администратору",
+                         reply_markup=url_admin_keyboard())
