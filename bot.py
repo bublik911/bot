@@ -1,7 +1,6 @@
 import asyncio
 from handlers import start, help, menu
-from aiogram import Bot, Dispatcher, types
-from aiogram.filters import Text
+from aiogram import Bot, Dispatcher
 
 
 async def main():
