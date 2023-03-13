@@ -13,6 +13,9 @@ class Consultant:
             self.all_message = item.all_message
             self.birthday_message = item.birthday_message
 
+    def get_id(self):
+        return self.id
+
     def get_name(self):
         return self.name
 
